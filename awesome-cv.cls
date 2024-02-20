@@ -295,6 +295,8 @@
 %       would be \googlescholar{g558OVoAAAAJ}{Kristin Branson}
 \newcommand*{\googlescholar}[2]{\def\@googlescholarid{#1}\def\@googlescholarname{#2}}
 
+\newcommand*{\mastodon}[2]{\def\@mastodonserver{#1}\def\@mastodonid{#2}}
+
 % Defines writer's linked-in (optional)
 % Usage: \linkedin{<linked-in-nick>}
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
@@ -443,6 +445,12 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{https://scholar.google.com/citations?user=\@googlescholarid}{\includegraphics[height=8pt]{google-scholar-v2.png}\acvHeaderIconSep\@googlescholarname}%
+        }%
+      \ifthenelse{\isundefined{\@mastodonid}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{http://\@mastodonserver/@\@mastodonid}{\includegraphics[height=8pt]{mastodon_v2.png}\acvHeaderIconSep @\@mastodonid}%
         }%
       \ifthenelse{\isundefined{\@linkedin}}%
         {}%
