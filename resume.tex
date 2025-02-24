@@ -27,7 +27,7 @@
 \documentclass[11pt, letterpaper]{awesome-cv}
 
 % Configure page margins with geometry
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+\geometry{left=2cm, top=1cm, right=1.4cm, bottom=2cm, footskip=.5cm}
 
 % Specify the location of the included fonts
 \fontdir[fonts/]
@@ -108,36 +108,48 @@
 I develop new and impactful ways to use computer vision (CV) and machine learning (ML) to gain insight into scientific questions. I do this by 1) finding new scientific questions that can be framed as CV\&ML problems, 2) engineering practical and integrative solutions, and 3) making these systems usable by others so that these methods are broadly adopted and applied to new problems. I was a pioneer of video-based analysis of animal behavior, and my work helped establish this as an important and ubiquitous technique in neuroscience and biology more generally.
 
 \cvsection{Education}
-\begin{cventries}
-  \cventry
-    {Ph.D., M.S., Computer Science} % Degree
-    {University of California, San Diego} % Institution
-    {La Jolla, CA} % Location
-    {2007, 2002} % Date(s)
-    {
-      \begin{cvitems} % Description(s) bullet points
-      \item Dissertation Title: {\it Tracking Multiple Mice through Severe Occlusions}
-      \item Advisors: Serge Belongie and Sanjoy Dasgupta
-      \end{cvitems}
-    }
-    \cventry{A.B., {\it Cum Laude}, Computer Science}
-    {Harvard University}
-    {Cambridge, MA}
-    {2000}
-    {}
-\end{cventries}
-\vspace{-4mm}
+
+{
+\setlength\tabcolsep{0pt}
+\setlength{\extrarowheight}{0pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+\entrytitlestyle{University of California, San Diego} & \entrylocationstyle{La Jolla, CA} \\
+\entrypositionstyle{Ph.D., M.S., Computer Science} & \entrydatestyle{2007,2002} \\
+~~\descriptionstyle{Dissertation Title: {\em Tracking Multiple Mice through Severe Occlusions}}\\
+~~\descriptionstyle{Advisers: Serge Belongie and Sanjoy Dasgupta}\\
+\entrytitlestyle{Harvard University} & \entrylocationstyle{Cambridge, MA} \\
+\entrypositionstyle{A.B. {\em Cum Laude}, Computer Science} & \entrydatestyle{2000}
+\end{tabular*}
+}
+
 \cvsection{Experience}
 
+{\setlength\tabcolsep{0pt}
+\setlength{\extrarowheight}{0pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+\entrytitlestyle{HHMI Janelia Research Campus} & \entrylocationstyle{Ashburn, VA}\\
+\entrypositionstyle{Senior Group Leader} & \entrydatestyle{2017-present} \\
+\entrypositionstyle{Head of Computation \& Theory} & \entrydatestyle{2017-2022} \\
+\entrypositionstyle{Group Leader} & \entrydatestyle{2010-2017}
+\end{tabular*}}
 
-\begin{cventries}
-\cventryfour{HHMI Janelia Research Campus}{Ashburn, VA}{Senior Group Leader}{2017 - PRESENT}{Head of Computation \& Theory}{2017 - 2022}{Group Leader}{2010 - 2017}{}
-\cventry{Postdoctoral Researcher}{California Institute of Technology}{Pasadena, CA}{2007 - 2010}{
-\begin{cvitems}
-  \item Advisors: Pietro Perona and Michael Dickinson
-\end{cvitems}
-}
-\end{cventries}
+{\setlength\tabcolsep{0pt}
+\setlength{\extrarowheight}{0pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+\entrytitlestyle{California Institute of Technology} & \entrylocationstyle{Pasadena, CA}\\
+\entrypositionstyle{Postdoctoral Researcher} & \entrydatestyle{2007-2009}\\
+~~\descriptionstyle{Advisers: Pietro Perona and Michael Dickinson}
+\end{tabular*}}
+
+{\setlength\tabcolsep{0pt}
+\setlength{\extrarowheight}{0pt}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+\entrytitlestyle{NASA Intern} & \\
+\entrypositionstyle{Graduate Student Researcher} & \entrylocationstyle{NASA Ames RC}\\
+~~\descriptionstyle{Research Institute for Advanced Computer Science} & \entrydatestyle{Summer 2000 \& 2001}\\
+\entrypositionstyle{Undergraduate Researcher} & \entrylocationstyle{NASA Armstrong Flight RC}\\
+~~\descriptionstyle{NASA Academy Program} & \entrydatestyle{Summer 1999}
+\end{tabular*}}
 
 %\cvsection{Selected Publications}
 %\vspace{\acvSectionContentTopSkip}
@@ -185,6 +197,7 @@ I lead, co-developed, and co-maintain the following open-source pieces of softwa
 \vspace{\acvSectionContentTopSkip}
 \vspace{2mm}
 \begin{cvitems}
+\item Led a lab from 2010-present.
 \item Established the Computation and Theory Research Area at Janelia (10 labs) and served as inaugural Head from 2017-2022. Set the overall vision and direction for computational research at Janelia; recruited, made hiring and renewal decisions, and set budgets for Group Leaders; initiated development of Janelia's GPU cluster; initiated Janelia's Theory Fellow program. 
 \item As part of Senior Leadership at Janelia, participated in institute-wide planning and decision-making, 2017-2022.
 \item Co-created the Janelia Diversity, Equity, and Inclusion Committee, 2018. Chaired committee 2018-2020. Participated 2020-2022. As part of this committee, we have researched and proposed initiatives to Janelia leadership, invited speakers to present at Janelia, and started a DEI reading group.

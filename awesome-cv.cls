@@ -547,20 +547,24 @@
 \newcommand*{\cventry}[5]{%
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
+  %\setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 3cm} R{3cm}}
     \ifempty{#1#3#4}
       {\entrytitlestyle{#2} \\
         \multicolumn{1}{L{\textwidth}}{\descriptionstyle{#5}}}
       {\ifempty{#2#3}
-          {\entrypositionstyle{#1} & \entrydatestyle{#4} \\}
+          {\entrypositionstyle{#1} & \entrydatestyle{#4}}
           {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-            \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-        \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}
+            \entrypositionstyle{#1} & \entrydatestyle{#4}}
+          \ifempty{#5}
+            {}
+            {\\ \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}}
+      }
   \end{tabular*}%
+  \vspace{.25\baselineskip}
 }
 
-\newcommand*{\cventryfour}[9]{%
+\newcommand*{\cventryfour}[8]{%
   \vspace{-2.0mm}
   \setlength\tabcolsep{0pt}
   \setlength{\extrarowheight}{0pt}
@@ -568,9 +572,9 @@
   \entrytitlestyle{#1} & \entrylocationstyle{#2} \\
   \entrypositionstyle{#3} & \entrydatestyle{#4} \\
   \entrypositionstyle{#5} & \entrydatestyle{#6} \\
-  \entrypositionstyle{#7} & \entrydatestyle{#8} \\
-  \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#9}}
+  \entrypositionstyle{#7} & \entrydatestyle{#8}
   \end{tabular*}%
+  \vspace{.25\baselineskip}
 }
 
 % Define an environment for cvsubentry
