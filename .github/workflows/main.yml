@@ -12,6 +12,17 @@ jobs:
           root_file: resume.tex
           compiler: xelatex
           args: -interaction=nonstopmode  # Continue even if there are errors
+          continue_on_error: true  # Continue even if LaTeX returns an error code
+      - name: Rename PDF
+        run: |
+          if [ -f "resume.pdf" ]; then
+            mv resume.pdf BransonCV.pdf
+            echo "PDF successfully renamed"
+          else
+            echo "resume.pdf not found!"
+            ls -la
+            exit 1
+          fi
       - name: Rename PDF file
         run: |
           mv resume.pdf BransonCV.pdf
