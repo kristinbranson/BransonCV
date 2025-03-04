@@ -11,6 +11,7 @@ jobs:
         with:
           root_file: resume.tex
           compiler: xelatex
+          latexmk_use_xelatex: true
       - name: Rename PDF file
         run: |
           mv resume.pdf BransonCV.pdf
