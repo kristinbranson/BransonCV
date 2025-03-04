@@ -10,7 +10,7 @@ jobs:
         uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
-          compiler: xelatex
+          compiler: latexmk
           latexmk_use_xelatex: true
       - name: Rename PDF file
         run: |
