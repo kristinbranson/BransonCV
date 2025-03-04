@@ -23,9 +23,6 @@ jobs:
             ls -la
             exit 1
           fi
-      - name: Rename PDF file
-        run: |
-          mv resume.pdf BransonCV.pdf
       - name: Commit PDF to repository
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
