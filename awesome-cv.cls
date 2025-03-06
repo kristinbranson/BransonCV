@@ -25,7 +25,6 @@
 \ProvidesClass{awesome-cv}[2017/02/05 v1.6.1 Awesome Curriculum Vitae Class]
 \NeedsTeXFormat{LaTeX2e}
 
-
 %-------------------------------------------------------------------------------
 %                Class options
 %
@@ -90,6 +89,7 @@
   pdfkeywords={}
 }
 
+\graphicspath{{icons/}}
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
@@ -299,6 +299,8 @@
 %       would be \googlescholar{g558OVoAAAAJ}{Kristin Branson}
 \newcommand*{\googlescholar}[2]{\def\@googlescholarid{#1}\def\@googlescholarname{#2}}
 
+\newcommand*{\bluesky}[2]{\def\@blueskyserver{#1}\def\@blueskyid{#2}}
+
 \newcommand*{\mastodon}[2]{\def\@mastodonserver{#1}\def\@mastodonid{#2}}
 
 % Defines writer's linked-in (optional)
@@ -455,6 +457,12 @@
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
           \href{http://\@mastodonserver/@\@mastodonid}{\includegraphics[height=8pt]{mastodon_v2.png}\acvHeaderIconSep @\@mastodonid}%
+        }%
+      \ifthenelse{\isundefined{\@blueskyid}}%
+        {}%
+        {%
+          \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
+          \href{https://bsky.app/profile/\@blueskyid.\@blueskyserver}{\includegraphics[height=8pt]{bluesky-brands-solid.pdf}\acvHeaderIconSep @\@blueskyid}%
         }%
       \ifthenelse{\isundefined{\@linkedin}}%
         {}%
